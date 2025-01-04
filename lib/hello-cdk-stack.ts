@@ -12,13 +12,13 @@ export class HelloCdkStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_20_X, // Provide any supported Node.js runtime
       handler: "index.handler",
       code: lambda.Code.fromInline(`
-        exports.handler = async function(event) {
-          return {
-            statusCode: 200,
-            body: JSON.stringify('Hello World!'),
+          exports.handler = async function(event) {
+            return {
+              statusCode: 200,
+              body: JSON.stringify('Hello CDK!'),
+            };
           };
-        };
-      `),
+        `),
     });
 
     // Define the Lambda function URL resource
